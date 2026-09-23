@@ -65,7 +65,3 @@ This proposal instead targets a transitional system in which higher-level select
 ## Citation
 
 https://doi.org/10.5281/zenodo.22907164
-
-## License
-
-Use the license associated with the Zenodo record and repository.
