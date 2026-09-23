@@ -1,0 +1,370 @@
+﻿Evolutionary Individuality: Human-Readable Companion to the Domain Adapter / Contract
+For the Evolutionary Individuality Domain Adapter / Contract and Structural Flow Universal Kernel v1.0
+1. Purpose
+This companion explains the human-readable meaning of the Evolutionary Individuality Domain Adapter / Contract and its interface with the Structural Flow Universal Kernel v1.0. The adapter machine-encodes the formal structure of the proposed experiment developed in Evolutionary Individuality as an Empirical Question: A Proposed Experimental Test in Pseudomonas. The scientific paper supplies the biological object, experimental contrast, evidence, account commitments, outcome logic, and limits of inference; the adapter receives those commitments only after they have been adjudicated into formal states.
+The companion sits beside the Lean adapter. Its job is to make the formal package auditable: what its objects and burdens mean, how DISCHARGED / VIOLATED / OPEN are used, how the three accounts route to native verdicts, how normalization and cross-seat comparison work, what the two encoded witnesses demonstrate, and what the checkpoint theorem closes. It may refer to the scientific paper when a formal declaration needs biological interpretation, but it is not a second scientific argument.
+2. Package Position
+The package contains four non-substitutable components.
+2.1 Universal Kernel
+Structural Flow Universal Kernel v1.0 supplies the universal translation and adjudication machinery used by the adapter through StructuralFlow.UniversalTranslationContract. The kernel distinguishes structural admissibility from downstream domain outcomes. This adapter required no kernel modification.
+2.2 Scientific Paper
+Evolutionary Individuality as an Empirical Question supplies the scientific basis for the formalization. It defines the genealogically traceable WS↔SM collective lineage, metapopulation treatment structure, Non-Mixed versus Mixed propagule contrast, post-evolution scaffold challenge, experimental horizons, common-environment re-assay, comparator accounts, and scientific inference limits. Lean does not generate or validate those premises.
+2.3 Domain Adapter / Contract
+Evolutionary_Individuality_Domain_Adapter_Contract_v0_2.lean, in namespace StructuralFlow.EvolutionaryIndividuality, is the machine-readable domain adapter and contract. It declares object burdens, domain-entry burdens, account-specific downstream burdens, native verdict functions, normalization, cross-seat routing, two fixed witness states, and a checkpoint theorem. It also exposes an experimenter-facing adjudication record and report surface through which results from the proposed experiment can be entered after scientific adjudication. It routes already-adjudicated states; it does not infer them from raw data.
+2.4 Human-Readable Companion
+This companion explains the machine-readable adapter / contract and its kernel interface. The package contains four non-substitutable components:
+1. the scientific paper defines the biological experiment, evidence requirements, and intended scientific interpretation;
+2. the Lean adapter / contract defines and machine-encodes the domain burdens, adjudication rules, experimenter-input surface, and account-routing logic;
+3. the universal kernel supplies the general formal interface used by the adapter / contract; and
+4. this companion explains the machine file and its relationship to the scientific paper and kernel.
+No component substitutes for the others.
+3. What Machine Closure Means
+The v0.2 adapter / contract was tested with Structural Flow Universal Kernel v1.0 and returned no messages. That establishes conditional machine closure: given the encoded object commitments, entry states, and downstream states, Lean accepts the declared routing to native verdicts, normalized verdicts, cross-seat results, and the structural distinctions used by the compatible kernel.
+It does not establish that the experiment has been performed or that any empirical burden has actually been discharged, violated, or left open. Those remain scientific judgments supplied to the adapter / contract after the experimental evidence has been interpreted.
+3.1 Experimenter Execution Surface
+The v0.2 adapter / contract provides an explicit input surface for specialists who have run the proposed experiment. After the resulting evidence has been scientifically adjudicated, the experimenter enters the resulting states into:
+submittedExperiment : ExperimentAdjudication
+The record contains the two object commitments, ten domain-entry requirements, and twelve downstream account requirements. Each is assigned one of the inherited dispositions:
+discharged
+violated
+open
+The public file ships with every field set to open. These values are placeholders, not empirical claims. A field should be changed only after the corresponding requirement has been adjudicated from the evidence described in the scientific paper.
+The primary execution command is:
+#eval experimentReport submittedExperiment
+The report first evaluates the structural admission surface. Its translationStatus is:
+structuralConforms when the required object and entry states are discharged;
+noLawfulTranslation when at least one required object or entry state is violated; or
+notYetAdjudicable when no required object or entry state is violated but at least one remains open.
+Account-level outputs are returned only after structural admission passes. A structurally conforming submission then reports whether downstream burdens are violated, open, or fully discharged; the native Clarke, Bourrat, and life-cycle verdicts; their normalized forms; and the resulting cross-seat verdict.
+The same submission also generates:
+experimentWorld submittedExperiment
+which is the corresponding World ObjectBurden DomainBurden supplied to the universal kernel architecture. The universal core state is held discharged on this execution surface because the published adapter / contract already fixes the object class, level, scope, and translation being used. A materially different biological object, level, scope, or formal translation requires a new or re-audited adapter rather than silent reuse of the input record.
+The two encoded witness states remain fixed regression cases. Experimenters enter results only in submittedExperiment; they do not alter the target-discordance or bounded-resilience witnesses.
+4. The Kernel / Adapter Boundary
+The kernel supplies universal translation machinery; the adapter supplies evolutionary-individuality-specific object, entry, and downstream content. Structural admissibility is therefore evaluated separately from downstream scientific success. A downstream burden may be VIOLATED or OPEN while the translated world remains StructuralConforms. That distinction is central to the two witnesses encoded later in the adapter.
+5. Formal Object Commitments
+Before the adapter can compare the three accounts, it requires a common biological object.
+The Lean adapter declares two required object burdens:
+collectiveLineageEntity
+and
+sharedSurfaceAcrossSeats.
+5.1 collectiveLineageEntity
+This burden pins the candidate biological object to the WS↔SM collective lineage considered as a life-cycle entity.
+The formal object is not:
+* an isolated WS mat;
+* an isolated SM propagule pool;
+* a culture vessel;
+* an individual bacterial cell; or
+* the entire experimental metapopulation.
+The constituent particle level is the Pseudomonas fluorescens cell. The focal biological level is the collective lineage extending across its recurrent WS↔SM life-cycle organization.
+The metapopulation has a different job. It is the experimental level at which the scaffold treatment is assigned and at which differences among candidate lineages can be compared. It is not substituted for the lineage-level candidate individual.
+5.2 sharedSurfaceAcrossSeats
+The second object burden requires the Clarke, Bourrat, and life-cycle-closure comparisons to refer to the same pinned lineage, level, and experimental scope.
+The formal comparison would lose its meaning if one account were evaluated on the WS mat, another on the full metapopulation, and another on a genealogical lineage spanning several stages. Cross-account disagreement is informative only when the accounts are answering different questions about the same biological case.
+The shared-object requirement therefore precedes account-level evaluation.
+Genealogical continuity is sufficient for the lineage relations used by the contract. The adapter does not require strict numerical identity of one physical collective through every life-cycle stage. What must remain scientifically traceable is the parent–offspring and lineage relationship through which descendant collective stages and descendant collective instances arise.
+These object commitments establish the common biological referent on which the rest of the domain contract operates.
+6. Disposition Semantics
+The adapter inherits the kernel type Disposition with three constructors:
+discharged
+violated
+open
+This companion renders them as DISCHARGED, VIOLATED, and OPEN.
+DISCHARGED means adequate adjudicated evidence supports the requirement at the declared object, level, and scope. VIOLATED means adequate adjudicated evidence supports failure of that requirement. OPEN means the requirement applies but available evidence does not adequately support either discharge or violation.
+These are not confidence scores. In particular:
+OPEN must not silently become VIOLATED.
+Nor should a demonstrated failure remain OPEN merely because the resulting downstream conclusion is inconvenient.
+The same states perform different roles at different layers. Entry burdens determine whether the experimental case is adequately specified for account-level adjudication. Downstream burdens determine what an admitted case supports under the three comparator accounts. Failure of entry therefore must not be converted into a negative biological verdict.
+7. Domain-Entry Requirements
+The adapter declares ten domain-entry burdens:
+Lean identifier
+	Human-readable job
+	accountVersionPinned
+	Freeze the comparator account formulations before outcomes are interpreted.
+	ancestryAdequacy
+	Establish the genealogy needed for heredity, reproductive contribution, and lineage-continuation claims.
+	assayAdequacy
+	Ensure the measurements can discriminate the scientific states assigned to them.
+	interventionIntegrity
+	Ensure the perturbation corresponds to the declared protected-propagule-lineage contrast.
+	treatmentUnitIntegrity
+	Preserve the metapopulation as the causal treatment unit and avoid pseudoreplication from nested observations.
+	referenceProvenance
+	Establish an independently warranted pre-challenge history for the reference material without selecting it for a desired account outcome.
+	commonEnvironmentAdequacy
+	Permit a defensible distinction between treatment-environment performance and heritable retention or erosion.
+	fullTrajectoryAdequacy
+	Preserve biologically relevant successes, failures, collapse, and extinction rather than conditioning only on survivors.
+	lifeCycleStageAdequacy
+	Ensure the life-cycle stages are biologically warranted and not merely laboratory handling steps.
+	lifeCycleTrajectoryAdequacy
+	Ensure observed transitions are adequate to evaluate biological multiplication, reestablishment, and closure.
+	Several distinctions require explicit protection.
+interventionIntegrity treats Mixed versus Non-Mixed as a manipulation of the protected propagule-lineage relation as a whole; it does not isolate spatial separation from cross-lineage competition.
+treatmentUnitIntegrity does not prescribe replication or a statistical model. It requires the evidence to respect the level at which the treatment is assigned.
+commonEnvironmentAdequacy does not prescribe one assay environment. It requires a comparison capable of distinguishing inherited organization from context-dependent expression.
+fullTrajectoryAdequacy and lifeCycleTrajectoryAdequacy are not duplicates. The first protects completeness of the experimental record; the second asks whether the biologically declared stage transitions are adequate for life-cycle inference.
+8. Entry Before Account-Level Evaluation
+All domain-entry burdens are DISCHARGED in both encoded witness states. If a required entry burden is OPEN, the relevant comparison is not yet adequately adjudicable. If an entry burden is VIOLATED, the declared case fails that admission condition. Neither result is automatically a negative verdict under Clarke, Bourrat, or the life-cycle account.
+9. Downstream Account Requirements
+After entry is discharged, the adapter evaluates twelve downstream burdens. These are account-specific scientific requirements, not further admission tests. Shared evidence can bear on several burdens without making those burdens equivalent.
+9.1 Clarke Downstream Requirements
+Lean identifier
+	Human-readable question
+	c1FocalSelectionCapacity
+	Does the pinned collective lineage possess a non-zero capacity to respond to selection at the collective level?
+	c2QualifyingIndividuatingMechanism
+	Is there at least one qualifying objective policing OR demarcating mechanism?
+	c3MechanismGrounding
+	Does the qualifying mechanism actually ground the focal selection capacity rather than merely correlate with collective performance?
+	c4NonArbitraryGrouping
+	Is the focal grouping biologically objective rather than observer-defined or merely a cross-level by-product?
+	Protected propagule-lineage structure is the primary candidate demarcating mechanism in the proposed experiment, but the adapter does not declare it qualifying merely because the experimenter manipulates it. C2 and C3 remain separate so that a biologically real feature need not automatically receive the proposed individuating function.
+10. Bourrat Downstream Requirements
+Lean identifier
+	Human-readable question
+	b1CollectivePhenotypicVariation
+	Do collective lineages differ in relevant higher-level phenotypes?
+	b2CollectiveFitnessDifferences
+	Do collective lineages differ in focal-level fitness or reproductive contribution?
+	b3CollectiveHeredity
+	Are relevant collective differences transmitted or recurrent through parent–descendant lineage relations?
+	b4ObjectiveIndividuation
+	Are the higher-level Darwinian properties generated by objective individuation rather than observer-imposed grouping?
+	b5InternalEndogenizedGeneration
+	Has the organization generating those properties become sufficiently internal/endogenized rather than remaining dependent on external individuation?
+	B1–B3 establish the relevant higher-level Darwinian antecedent. B4 distinguishes objective individuation from arbitrary grouping but does not require that the individuating cause be internal.
+B5 carries an asymmetric inference in the proposed experiment. Adequate evidence that a required component of the organization remains dependent on protected propagule-lineage structure can support B5 = VIOLATED. Survival after relaxation of that one relation cannot by itself support B5 = DISCHARGED while other potentially load-bearing external contributions remain untested. In the adapter's bounded-resilience witness, that branch is B5 = OPEN.
+11. Life-Cycle-Closure Downstream Requirements
+Lean identifier
+	Human-readable question
+	l1Multiplication
+	Do biological descendants establish a new focal collective-stage instance?
+	l2Closure
+	Does the prospectively declared biological stage graph form a connected cycle in which every stage can eventually be reached from every other stage?
+	l3FocalStageReestablishment
+	Are the focal biological stages recurrently regenerated across collective generations?
+	These burdens are evaluated only after lifeCycleStageAdequacy and lifeCycleTrajectoryAdequacy are DISCHARGED. Researcher transfer between vessels does not itself constitute biological multiplication, and a repeating laboratory schedule does not itself establish closure.
+12. Shared Evidence Without Shared Criteria
+The adapter receives adjudicated burden states rather than raw data. The following map explains how evidence described in the scientific paper can contribute to several non-equivalent burdens:
+Scientific-paper evidence
+	Formal uses
+	Genealogy / ancestry
+	C4; B3; L1; L3
+	Collective phenotypic variation
+	C1 where relevant to selection analysis; B1
+	Collective reproductive contribution / fitness
+	C1; B2
+	Within- / between-level selection evidence
+	C1; C3
+	Protected propagule-lineage structure and perturbation
+	C2; C3; B4; B5
+	Common-environment retention / erosion
+	B3 where relevant; especially B5
+	Full biological trajectories
+	L1; L2; L3 after entry safeguards
+	Early versus longer post-challenge observations
+	Primarily B5: dependence, resilience, erosion, and later reacquisition
+	This map is explanatory, not algorithmic. Scientific adjudication occurs before the states are supplied to the adapter; Lean routes the resulting DISCHARGED, VIOLATED, or OPEN states.
+13. Account-Native Verdict Functions
+Each account first produces a native verdict. This preserves account-specific meaning before normalization.
+13.1 clarkeVerdict
+Type:
+ClarkeVerdict
+Constructors:
+capacityPresent
+capacityNotWarranted
+indeterminate
+Routing over C1–C4:
+C1–C4
+	ClarkeVerdict
+	all DISCHARGED
+	capacityPresent
+	at least one VIOLATED
+	capacityNotWarranted
+	otherwise
+	indeterminate
+	Thus OPEN remains distinct from a demonstrated Clarke failure.
+13.2 bourratVerdict
+Type:
+BourratVerdict
+Constructors:
+antecedentNotEstablished
+pseudoDarwinian
+darwinianLike
+darwinian
+indeterminate
+The routing is sequential:
+State
+	BourratVerdict
+	any of B1–B3 VIOLATED
+	antecedentNotEstablished
+	no B1–B3 violation but any B1–B3 OPEN
+	indeterminate
+	B1–B3 DISCHARGED, B4 OPEN
+	indeterminate
+	B1–B3 DISCHARGED, B4 VIOLATED
+	pseudoDarwinian
+	B1–B4 DISCHARGED, B5 OPEN
+	indeterminate
+	B1–B4 DISCHARGED, B5 VIOLATED
+	darwinianLike
+	B1–B5 DISCHARGED
+	darwinian
+	The branch order matters. A demonstrated failure among B1–B3 establishes that the Darwinian antecedent is not established even if another antecedent burden remains open. B4 is evaluated only after B1–B3 are discharged, and B5 only after B1–B4 are discharged.
+antecedentNotEstablished is adapter/contract routing terminology. It is not presented as a Bourrat-authored named biological category.
+13.3 lifeCycleVerdict
+Type:
+LifeCycleVerdict
+Constructors:
+lifeCycleClosed
+lifeCycleNotClosed
+indeterminate
+The function first checks lifeCycleStageAdequacy and lifeCycleTrajectoryAdequacy. If either is not DISCHARGED, the verdict is indeterminate. Otherwise L1–L3 route as follows:
+L1–L3
+	LifeCycleVerdict
+	all DISCHARGED
+	lifeCycleClosed
+	at least one VIOLATED
+	lifeCycleNotClosed
+	otherwise
+	indeterminate
+	The function therefore prevents an inadequate stage or trajectory definition from becoming evidence that biological closure has failed.
+14. Normalized Verdicts
+Normalization is deliberately lossy and exists only for cross-seat comparison.
+Type:
+NormalizedVerdict
+Constructors:
+positive
+negative
+indeterminate
+Native verdict
+	Normalized
+	ClarkeVerdict.capacityPresent
+	positive
+	ClarkeVerdict.capacityNotWarranted
+	negative
+	ClarkeVerdict.indeterminate
+	indeterminate
+	BourratVerdict.darwinian
+	positive
+	BourratVerdict.darwinianLike
+	negative
+	BourratVerdict.pseudoDarwinian
+	negative
+	BourratVerdict.antecedentNotEstablished
+	negative
+	BourratVerdict.indeterminate
+	indeterminate
+	LifeCycleVerdict.lifeCycleClosed
+	positive
+	LifeCycleVerdict.lifeCycleNotClosed
+	negative
+	LifeCycleVerdict.indeterminate
+	indeterminate
+	For Bourrat, negative means only that full Darwinian individuality in the encoded endogenization sense has not been established. A native darwinianLike result therefore remains scientifically distinct from pseudoDarwinian or antecedentNotEstablished even though all normalize to negative. Native verdicts should always remain visible in interpretation.
+15. Cross-Seat Comparison
+Type:
+CrossSeatVerdict
+Constructors:
+concordantPositive
+concordantNegative
+discordant
+indeterminate
+crossSeatVerdict evaluates the three normalized outputs:
+Normalized outputs
+	CrossSeatVerdict
+	any seat indeterminate
+	indeterminate
+	all positive
+	concordantPositive
+	all negative
+	concordantNegative
+	any other fully resolved mixture
+	discordant
+	The cross-seat verdict reports convergence, divergence, or unresolved comparison. It does not choose a preferred theory, merge account criteria, change the biological object, or supply missing evidence.
+16. Target-Discordance Witness
+The first witness is defined by:
+targetDomainState
+targetWorld
+targetDomainState assigns:
+b5InternalEndogenizedGeneration = violated
+and every other DomainBurden = discharged.
+worldFromDomainState combines that domain state with cleanCoreState and cleanObjectState. These clean states are witness assumptions used to hold structural admission fixed; they are not empirical discoveries.
+The adapter closes:
+Theorem
+	Result
+	target_entry_discharged
+	every required domain-entry burden is discharged
+	target_structuralConforms
+	StructuralConforms targetWorld
+	target_domainOutcomeNegative
+	DomainOutcomeNegative targetWorld, witnessed by B5
+	target_clarke
+	ClarkeVerdict.capacityPresent
+	target_bourrat
+	BourratVerdict.darwinianLike
+	target_lifeCycle
+	LifeCycleVerdict.lifeCycleClosed
+	target_crossSeat
+	CrossSeatVerdict.discordant
+	The normalized pattern is positive / negative / positive. The witness therefore demonstrates a structurally conforming translated world with a downstream B5 violation and a resolved cross-seat disagreement. It is a formal test case, not a claim that the proposed experiment has already produced that state.
+17. Bounded-Resilience Witness
+The second witness is defined by:
+boundedResilienceDomainState
+boundedResilienceWorld
+It differs from the target witness in one disposition only:
+b5InternalEndogenizedGeneration = open
+Every other DomainBurden remains discharged.
+The adapter closes:
+Theorem
+	Result
+	boundedResilience_entry_discharged
+	every required domain-entry burden is discharged
+	boundedResilience_structuralConforms
+	StructuralConforms boundedResilienceWorld
+	boundedResilience_domainOpen
+	DomainBurdenOpen boundedResilienceWorld, witnessed by B5
+	boundedResilience_bourrat
+	BourratVerdict.indeterminate
+	boundedResilience_crossSeat
+	CrossSeatVerdict.indeterminate
+	This is the machine expression of bounded resilience. Survival of the tested scaffold relaxation does not discharge full B5; B5 remains OPEN, which propagates through the Bourrat verdict and cross-seat result.
+18. Why the Two Witnesses Are Paired
+The witnesses isolate one formal distinction while holding the remainder of the domain state fixed:
+Target: B5 VIOLATED → darwinianLike → resolved discordant
+Bounded resilience: B5 OPEN → Bourrat indeterminate → cross-seat indeterminate
+Together they show that structural conformance can coexist with either a downstream violation or a downstream open burden, and that neither state is the same as structural-translation failure.
+19. Adapter Checkpoint
+The theorem:
+evolutionary_individuality_adapter_checkpoint
+collects the principal results from both witness families.
+Target branch
+StructuralConforms targetWorld
+DomainOutcomeNegative targetWorld
+Clarke capacityPresent
+Bourrat darwinianLike
+LifeCycle lifeCycleClosed
+crossSeat discordant
+Bounded-resilience branch
+StructuralConforms boundedResilienceWorld
+DomainBurdenOpen boundedResilienceWorld
+Bourrat indeterminate
+crossSeat indeterminate
+The checkpoint adds no new scientific claim. The reported clean Lean elaboration establishes that these declared formal consequences are accepted by the compatible universal kernel.
+20. Scope of the Machine Result
+The formal package is narrower than the experiment it represents. The adapter does not ingest raw data or determine whether ancestry, assays, mechanism claims, endogenization, or life-cycle closure are empirically adequate. Those judgments remain scientific inputs.
+Machine closure does not establish:
+* that the experiment has been performed;
+* that any assay is biologically adequate;
+* that any burden is empirically DISCHARGED, VIOLATED, or OPEN;
+* that protected propagule-lineage structure is empirically a Clarke individuating mechanism;
+* that B5 is empirically violated or discharged;
+* that collective life-cycle closure is empirically present or absent;
+* that one account of evolutionary individuality is correct; or
+* that this application empirically validates the universal kernel.
+It establishes only that, given the declared formal states, the adapter / contract routes them consistently through the compatible universal kernel. 
+21. Relation to the Scientific Paper
+Evolutionary Individuality as an Empirical Question carries the scientific argument: why the proposed experiment is informative, what evidence is required, how the comparator accounts differ, and what experimental outcomes would support.
+The adapter and companion begin after those scientific judgments have been made. Their question is whether the consequences can be represented without changing the biological object, collapsing the accounts, erasing OPEN states, or confusing a downstream scientific result with failure of structural translation.
+For the encoded target and bounded-resilience branches, the adapter answers that formal question affirmatively. No modification to Structural Flow Universal Kernel v1.0 was required.
